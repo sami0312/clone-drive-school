@@ -3,6 +3,10 @@ import HeroSection from "@/components/HeroSection";
 import CourseSection from "@/components/CourseSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
+import AreasSection from "@/components/AreasSection";
+import ResourcesSection from "@/components/ResourcesSection";
+import BookOnlineSection from "@/components/BookOnlineSection";
+import HelpSupportSection from "@/components/HelpSupportSection";
 
 const Index = () => {
   return (
@@ -11,7 +15,11 @@ const Index = () => {
       <main>
         <HeroSection />
         <CourseSection />
+        <ResourcesSection />
+        <AreasSection />
         <TestimonialsSection />
+        <BookOnlineSection />
+        <HelpSupportSection />
       </main>
       <Footer />
     </div>

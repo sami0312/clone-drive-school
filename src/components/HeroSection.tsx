@@ -13,19 +13,19 @@ const HeroSection = () => {
       image: heroBanner1,
       title: "INSTRUCTOR ALLOCATED WITHIN 24 HOURS",
       subtitle: "Get on the road with the UK's leading independent driving school network. Discover your perfect course and call us to start your lessons today!",
-      phone: "020 3051 4245"
+      phone: "07305556219"
     },
     {
       image: heroBanner2,
       title: "PASS YOUR TEST IN AS LITTLE AS 2 MONTHS",
       subtitle: "SAVE up to £250 on any driving course with our proven intensive learning methods.",
-      phone: "020 3051 4245"
+      phone: "07305556219"
     },
     {
       image: heroBanner3,
       title: "AREAS WE COVER ACROSS LONDON",
       subtitle: "Professional driving instructors covering all major areas. Book your lessons today!",
-      phone: "020 3051 4245"
+      phone: "07305556219"
     }
   ];
 
@@ -78,7 +78,7 @@ const HeroSection = () => {
                 {/* Call Now Button */}
                 <Button 
                   size="lg" 
-                  className="bg-leo-green hover:bg-secondary-light text-white text-lg px-8 py-6 rounded-full"
+                  className="bg-yan-blue hover:bg-yan-light-blue text-white text-lg px-8 py-6 rounded-full"
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now at {slide.phone}
@@ -115,7 +115,7 @@ const HeroSection = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? "bg-leo-green" : "bg-white/50"
+              index === currentSlide ? "bg-yan-blue" : "bg-white/50"
             }`}
           />
         ))}

@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <div className="relative max-w-4xl mx-auto bg-primary rounded-2xl overflow-hidden">
             <div className="aspect-video bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
-              <Button size="lg" className="bg-leo-green hover:bg-secondary-light text-white rounded-full p-6">
+              <Button size="lg" className="bg-yan-blue hover:bg-yan-light-blue text-white rounded-full p-6">
                 <Play className="h-8 w-8" />
               </Button>
             </div>
@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
 
         {/* Testimonials Carousel */}
         <div className="relative max-w-4xl mx-auto">
-          <Card className="border-2 border-leo-green/20">
+          <Card className="border-2 border-yan-blue/20">
             <CardContent className="p-8">
               <div className="text-center">
                 {/* Stars */}
@@ -94,7 +94,7 @@ const TestimonialsSection = () => {
                 </h3>
 
                 {/* Title */}
-                <h4 className="text-lg font-semibold text-leo-green mb-4">
+                <h4 className="text-lg font-semibold text-yan-blue mb-4">
                   {testimonials[currentTestimonial].title}
                 </h4>
 
@@ -111,7 +111,7 @@ const TestimonialsSection = () => {
             onClick={prevTestimonial}
             variant="outline"
             size="sm"
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 border-leo-green text-leo-green hover:bg-leo-green hover:text-white"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 border-yan-blue text-yan-blue hover:bg-yan-blue hover:text-white"
           >
             <ChevronLeft className="h-4 w-4" />
           </Button>
@@ -120,7 +120,7 @@ const TestimonialsSection = () => {
             onClick={nextTestimonial}
             variant="outline"
             size="sm"
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 border-leo-green text-leo-green hover:bg-leo-green hover:text-white"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 border-yan-blue text-yan-blue hover:bg-yan-blue hover:text-white"
           >
             <ChevronRight className="h-4 w-4" />
           </Button>
@@ -132,7 +132,7 @@ const TestimonialsSection = () => {
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentTestimonial ? "bg-leo-green" : "bg-gray-300"
+                  index === currentTestimonial ? "bg-yan-blue" : "bg-gray-300"
                 }`}
               />
             ))}
@@ -150,7 +150,7 @@ const TestimonialsSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary-light/80 flex items-center justify-center">
                   <Button 
                     size="sm" 
-                    className="bg-leo-green hover:bg-secondary-light text-white rounded-full p-3 opacity-80 group-hover:opacity-100 transition-opacity"
+                    className="bg-yan-blue hover:bg-yan-light-blue text-white rounded-full p-3 opacity-80 group-hover:opacity-100 transition-opacity"
                   >
                     <Play className="h-4 w-4" />
                   </Button>

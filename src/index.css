@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Leo Driving School Design System - Exact replica colors and styles */
+/* Yan's Driving Lessons Design System - Blue theme */
 
 @layer base {
   :root {
@@ -15,21 +15,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Leo Driving primary colors - burgundy/red theme */
-    --primary: 0 45% 25%;
+    /* Yan's Driving primary colors - blue theme */
+    --primary: 220 70% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 0 60% 35%;
-    --primary-dark: 0 40% 15%;
+    --primary-light: 220 70% 35%;
+    --primary-dark: 220 70% 15%;
 
-    /* Leo Driving secondary - bright green */
-    --secondary: 142 76% 36%;
+    /* Yan's Driving secondary - bright blue */
+    --secondary: 210 100% 50%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 142 76% 46%;
+    --secondary-light: 210 100% 60%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 142 76% 36%;
+    --accent: 210 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -37,21 +37,21 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 142 76% 36%;
+    --ring: 210 100% 50%;
 
-    /* Leo Driving specific colors */
-    --leo-red: 0 60% 35%;
-    --leo-green: 142 76% 36%;
-    --leo-dark-red: 0 40% 15%;
-    --leo-light-gray: 210 20% 98%;
+    /* Yan's Driving specific colors */
+    --yan-blue: 210 100% 50%;
+    --yan-light-blue: 210 100% 60%;
+    --yan-dark-blue: 220 70% 15%;
+    --yan-light-gray: 210 20% 98%;
     
     /* Gradients for hero sections */
-    --gradient-red: linear-gradient(135deg, hsl(var(--leo-dark-red)), hsl(var(--leo-red)));
-    --gradient-red-overlay: linear-gradient(rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.9));
+    --gradient-blue: linear-gradient(135deg, hsl(var(--yan-dark-blue)), hsl(var(--yan-blue)));
+    --gradient-blue-overlay: linear-gradient(rgba(30, 144, 255, 0.8), rgba(30, 144, 255, 0.9));
     
     /* Text colors */
     --text-hero: 0 0% 100%;
-    --text-accent: 142 76% 36%;
+    --text-accent: 210 100% 50%;
 
     --radius: 0.5rem;
 
@@ -121,32 +121,32 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Leo Driving specific utility classes */
+  /* Yan's Driving specific utility classes */
   .hero-gradient {
-    background: var(--gradient-red);
+    background: var(--gradient-blue);
   }
   
   .hero-overlay {
-    background: var(--gradient-red-overlay);
+    background: var(--gradient-blue-overlay);
   }
   
   .text-hero {
     color: hsl(var(--text-hero));
   }
   
-  .text-leo-green {
-    color: hsl(var(--leo-green));
+  .text-yan-blue {
+    color: hsl(var(--yan-blue));
   }
   
-  .bg-leo-green {
-    background-color: hsl(var(--leo-green));
+  .bg-yan-blue {
+    background-color: hsl(var(--yan-blue));
   }
   
-  .bg-leo-red {
-    background-color: hsl(var(--leo-red));
+  .bg-yan-light-blue {
+    background-color: hsl(var(--yan-light-blue));
   }
   
-  .border-leo-green {
-    border-color: hsl(var(--leo-green));
+  .border-yan-blue {
+    border-color: hsl(var(--yan-blue));
   }
 }
