@@ -55,15 +55,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				yan: {
-					blue: 'hsl(var(--yan-blue))',
-					'light-blue': 'hsl(var(--yan-light-blue))',
-					'dark-blue': 'hsl(var(--yan-dark-blue))',
-					green: 'hsl(var(--yan-green))',
-					red: 'hsl(var(--yan-red))',
-					'light-gray': 'hsl(var(--yan-light-gray))',
-					black: 'hsl(var(--yan-black))',
-					white: 'hsl(var(--yan-white))'
+				leo: {
+					red: 'hsl(var(--leo-red))',
+					green: 'hsl(var(--leo-green))',
+					'dark-red': 'hsl(var(--leo-dark-red))',
+					'light-gray': 'hsl(var(--leo-light-gray))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

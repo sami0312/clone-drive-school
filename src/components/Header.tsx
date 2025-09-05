@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X, ShoppingCart, User, Facebook, Instagram, Youtube, MessageCircle } from "lucide-react";
+import { Phone, Menu, X, ShoppingCart, User } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import yansLogo from "@/assets/yans-logo.png";
 
@@ -14,13 +14,6 @@ const Header = () => {
     { name: "AREAS WE COVER", href: "#areas" },
     { name: "Help & Support", href: "#contact" },
     { name: "Book Online", href: "#book" }
-  ];
-
-  const socialMediaLinks = [
-    { name: "Facebook", href: "https://facebook.com/yansdrivinglessons", icon: Facebook },
-    { name: "Instagram", href: "https://instagram.com/yansdrivinglessons", icon: Instagram },
-    { name: "YouTube", href: "https://youtube.com/@yansdrivinglessons", icon: Youtube },
-    { name: "WhatsApp", href: "https://wa.me/447305556219", icon: MessageCircle }
   ];
 
   return (
@@ -42,14 +35,11 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-2xl font-bold">
-                <span className="text-yan-blue">YAN'S</span>
-                <div className="text-sm text-yan-dark-blue">DRIVING LESSONS</div>
-              </div>
+              <img src={yansLogo} alt="Yan's Driving Lessons" className="h-12 w-12" />
             </div>
 
             {/* Phone Number */}
-            <div className="hidden md:flex items-center space-x-2 bg-yan-blue text-white px-4 py-2 rounded-lg">
+            <div className="hidden md:flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-lg">
               <Phone className="h-4 w-4" />
               <span className="font-semibold">07305556219</span>
             </div>
@@ -69,25 +59,6 @@ const Header = () => {
 
             {/* Right Side Icons */}
             <div className="flex items-center space-x-2">
-              {/* Social Media Links */}
-              <div className="hidden md:flex items-center space-x-2">
-                {socialMediaLinks.map((social) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 text-yan-blue hover:text-yan-green transition-colors"
-                      aria-label={social.name}
-                    >
-                      <IconComponent className="h-4 w-4" />
-                    </a>
-                  );
-                })}
-              </div>
-
               <Button variant="ghost" size="sm" className="hidden md:flex">
                 <User className="h-4 w-4" />
               </Button>
@@ -107,30 +78,10 @@ const Header = () => {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-64">
                   <div className="flex flex-col space-y-4 mt-4">
-                    <div className="flex items-center space-x-2 bg-yan-blue text-white px-4 py-2 rounded-lg">
+                    <div className="flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-lg">
                       <Phone className="h-4 w-4" />
                       <span className="font-semibold">07305556219</span>
                     </div>
-                    
-                    {/* Mobile Social Media Links */}
-                    <div className="flex items-center space-x-4 py-2">
-                      {socialMediaLinks.map((social) => {
-                        const IconComponent = social.icon;
-                        return (
-                          <a
-                            key={social.name}
-                            href={social.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-2 text-yan-blue hover:text-yan-green transition-colors"
-                            aria-label={social.name}
-                          >
-                            <IconComponent className="h-5 w-5" />
-                          </a>
-                        );
-                      })}
-                    </div>
-                    
                     {navigationItems.map((item) => (
                       <a
                         key={item.name}

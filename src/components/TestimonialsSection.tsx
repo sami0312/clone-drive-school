@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <div className="relative max-w-4xl mx-auto bg-primary rounded-2xl overflow-hidden">
             <div className="aspect-video bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
-              <Button size="lg" className="bg-yan-blue hover:bg-yan-green text-white rounded-full p-6">
+              <Button size="lg" className="bg-yan-blue hover:bg-yan-light-blue text-white rounded-full p-6">
                 <Play className="h-8 w-8" />
               </Button>
             </div>
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
 
         {/* Success Stories */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-yan-dark-blue">Our Success Stories</h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary">Our Success Stories</h2>
           <p className="text-lg text-muted-foreground">
             Empowering learners to achieve their driving dreams, one success story at a time!
           </p>
@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Name */}
-                <h3 className="text-xl font-bold text-yan-dark-blue mb-2">
+                <h3 className="text-xl font-bold text-primary mb-2">
                   {testimonials[currentTestimonial].name}
                 </h3>
 
@@ -144,7 +144,7 @@ const TestimonialsSection = () => {
 
         {/* Happy Drivers Section */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-center mb-8 text-yan-dark-blue">Happy Drivers</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-primary">Happy Drivers</h2>
           
           {/* Success Images */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -171,7 +171,7 @@ const TestimonialsSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary-light/80 flex items-center justify-center">
                   <Button 
                     size="sm" 
-                    className="bg-yan-blue hover:bg-yan-green text-white rounded-full p-3 opacity-80 group-hover:opacity-100 transition-opacity"
+                    className="bg-yan-blue hover:bg-yan-light-blue text-white rounded-full p-3 opacity-80 group-hover:opacity-100 transition-opacity"
                   >
                     <Play className="h-4 w-4" />
                   </Button>

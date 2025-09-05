@@ -30,7 +30,7 @@ const BookOnlineSection = () => {
     <section id="book" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-yan-dark-blue">Book Online in 4 Easy Steps</h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary">Book Online in 4 Easy Steps</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Simple, secure, and instant booking for your driving lessons
           </p>
@@ -54,7 +54,7 @@ const BookOnlineSection = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-yan-blue hover:bg-yan-green text-white px-12 py-4 text-lg">
+          <Button size="lg" className="bg-yan-blue hover:bg-yan-light-blue text-white px-12 py-4 text-lg">
             Start Booking Now
           </Button>
         </div>

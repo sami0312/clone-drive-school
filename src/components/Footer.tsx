@@ -1,16 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram, Youtube, Clock, Award } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 
 const Footer = () => {
-  const socialMediaLinks = [
-    { name: "Facebook", href: "https://facebook.com/yansdrivinglessons", icon: Facebook, color: "hover:text-blue-400" },
-    { name: "Instagram", href: "https://instagram.com/yansdrivinglessons", icon: Instagram, color: "hover:text-pink-400" },
-    { name: "YouTube", href: "https://youtube.com/@yansdrivinglessons", icon: Youtube, color: "hover:text-red-400" },
-    { name: "WhatsApp", href: "https://wa.me/447305556219", icon: MessageCircle, color: "hover:text-green-400" }
-  ];
-
   return (
-    <footer className="bg-yan-black text-white">
+    <footer className="bg-primary text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -23,19 +16,6 @@ const Footer = () => {
             <p className="text-gray-300 mb-4">
               Get on the road with the UK's leading independent driving school network.
             </p>
-            
-            {/* Trust Indicators */}
-            <div className="mb-6 space-y-3">
-              <div className="flex items-center space-x-2">
-                <Award className="h-4 w-4 text-yan-green" />
-                <span className="text-sm">100% DVSA Approved</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 text-yan-green" />
-                <span className="text-sm">24/7 Instructor Allocation</span>
-              </div>
-            </div>
-            
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-yan-blue" />
@@ -50,35 +30,13 @@ const Footer = () => {
                 <span>London, UK</span>
               </div>
             </div>
-            
-            {/* Social Media Links */}
-            <div className="mt-6">
-              <h4 className="text-sm font-semibold mb-3">Follow Us</h4>
-              <div className="flex space-x-3">
-                {socialMediaLinks.map((social) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`p-2 bg-yan-blue hover:bg-yan-green rounded-full transition-colors ${social.color}`}
-                      aria-label={social.name}
-                    >
-                      <IconComponent className="h-4 w-4" />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-yan-green transition-colors">Home</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-leo-green transition-colors">Home</a></li>
               <li><a href="#courses" className="text-gray-300 hover:text-yan-blue transition-colors">Courses & Prices</a></li>
               <li><a href="#resources" className="text-gray-300 hover:text-yan-blue transition-colors">Resources</a></li>
               <li><a href="#areas" className="text-gray-300 hover:text-yan-blue transition-colors">Areas We Cover</a></li>
@@ -105,7 +63,7 @@ const Footer = () => {
               Ready to start your driving journey? Contact us today!
             </p>
             <div className="space-y-3">
-              <Button className="w-full bg-yan-blue hover:bg-yan-green text-white">
+              <Button className="w-full bg-yan-blue hover:bg-yan-light-blue text-white">
                 <Phone className="mr-2 h-4 w-4" />
                 Call Now
               </Button>

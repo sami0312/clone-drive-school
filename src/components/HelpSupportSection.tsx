@@ -13,7 +13,7 @@ const HelpSupportSection = () => {
       hours: "Mon-Sun: 8AM-8PM",
       action: () => window.open("tel:07305556219"),
       bgColor: "bg-yan-blue",
-      hoverColor: "hover:bg-yan-green"
+      hoverColor: "hover:bg-yan-light-blue"
     },
     {
       icon: Mail,
@@ -22,8 +22,8 @@ const HelpSupportSection = () => {
       contact: "Yansdriving@gmail.com",
       hours: "Response within 24 hours",
       action: () => window.open("mailto:Yansdriving@gmail.com"),
-      bgColor: "bg-yan-blue",
-      hoverColor: "hover:bg-yan-green"
+      bgColor: "bg-yan-red",
+      hoverColor: "hover:bg-yan-red"
     },
     {
       icon: MessageCircle,
@@ -33,7 +33,7 @@ const HelpSupportSection = () => {
       hours: "Instant messaging",
       action: () => window.open("https://wa.me/447305556219"),
       bgColor: "bg-yan-green",
-      hoverColor: "hover:bg-yan-blue"
+      hoverColor: "hover:bg-yan-green"
     },
     {
       icon: Instagram,
@@ -70,7 +70,7 @@ const HelpSupportSection = () => {
     <section id="contact" className="py-16 bg-yan-light-gray">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-yan-dark-blue">Help & Support</h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary">Help & Support</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We're here to help you every step of the way. Get in touch with any questions.
           </p>
@@ -88,7 +88,7 @@ const HelpSupportSection = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-2">{option.description}</p>
-                <p className="font-semibold text-yan-dark-blue mb-2">{option.contact}</p>
+                <p className="font-semibold text-primary mb-2">{option.contact}</p>
                 <p className="text-sm text-muted-foreground mb-4">{option.hours}</p>
                 <Button 
                   onClick={option.action}
@@ -109,7 +109,7 @@ const HelpSupportSection = () => {
               <p className="mb-6">Book your first lesson and get on the road today!</p>
               <ContactForm 
                 trigger={
-                  <Button className="bg-yan-blue hover:bg-yan-green text-white">
+                  <Button className="bg-yan-blue hover:bg-yan-light-blue text-white">
                     Book Your First Lesson
                   </Button>
                 }
@@ -120,7 +120,7 @@ const HelpSupportSection = () => {
 
         {/* FAQ Section */}
         <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-8 text-yan-dark-blue">Frequently Asked Questions</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-primary">Frequently Asked Questions</h3>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <Card key={index}>
