@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, ShoppingCart, User } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import yansLogo from "@/assets/yans-logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +18,15 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Banner */}
-      <div className="bg-yan-blue text-white text-center py-2 text-sm font-medium">
-        SAVE 15% (up to £250) off your course when you pay today!
+      {/* Top Banner - Scrolling Text */}
+      <div className="bg-yan-blue text-white py-2 text-sm font-medium overflow-hidden">
+        <div className="animate-scroll whitespace-nowrap">
+          <span className="inline-block px-8">100% DVSA APPROVED INSTRUCTOR</span>
+          <span className="inline-block px-8">100% DVSA APPROVED INSTRUCTOR</span>
+          <span className="inline-block px-8">100% DVSA APPROVED INSTRUCTOR</span>
+          <span className="inline-block px-8">100% DVSA APPROVED INSTRUCTOR</span>
+          <span className="inline-block px-8">100% DVSA APPROVED INSTRUCTOR</span>
+        </div>
       </div>
 
       {/* Main Header */}
@@ -28,11 +35,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-2xl font-bold">
-                <span className="text-primary">YAN'S</span>
-                <span className="text-yan-blue"> DRIVING</span>
-                <div className="text-xs text-muted-foreground">LESSONS</div>
-              </div>
+              <img src={yansLogo} alt="Yan's Driving Lessons" className="h-12 w-12" />
             </div>
 
             {/* Phone Number */}

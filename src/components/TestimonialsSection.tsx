@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Star, Play } from "lucide-react";
+import studentSuccess1 from "@/assets/student-success-1.png";
+import studentSuccess2 from "@/assets/student-success-2.png";
+import studentSuccess3 from "@/assets/student-success-3.png";
 
 const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -143,10 +146,28 @@ const TestimonialsSection = () => {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-primary">Happy Drivers</h2>
           
-          {/* Video Grid */}
+          {/* Success Images */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(9)].map((_, index) => (
-              <div key={index} className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden group cursor-pointer">
+            <div className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer">
+              <img src={studentSuccess1} alt="Student Success Story 1" className="w-full h-full object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm">
+                Student Success Story 1
+              </div>
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer">
+              <img src={studentSuccess2} alt="Student Success Story 2" className="w-full h-full object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm">
+                Student Success Story 2
+              </div>
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer">
+              <img src={studentSuccess3} alt="Student Success Story 3" className="w-full h-full object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm">
+                Student Success Story 3
+              </div>
+            </div>
+            {[...Array(6)].map((_, index) => (
+              <div key={index + 3} className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary-light/80 flex items-center justify-center">
                   <Button 
                     size="sm" 
@@ -156,7 +177,7 @@ const TestimonialsSection = () => {
                   </Button>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm">
-                  Student Success Story {index + 1}
+                  Student Success Story {index + 4}
                 </div>
               </div>
             ))}
