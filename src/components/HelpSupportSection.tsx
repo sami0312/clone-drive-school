@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MessageCircle, HelpCircle, FileText, Clock } from "lucide-react";
+import { Phone, Mail, MessageCircle, HelpCircle, FileText, Clock, Instagram } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 const HelpSupportSection = () => {
@@ -10,21 +10,40 @@ const HelpSupportSection = () => {
       title: "Call Us",
       description: "Speak directly with our team",
       contact: "07305556219",
-      hours: "Mon-Sun: 8AM-8PM"
+      hours: "Mon-Sun: 8AM-8PM",
+      action: () => window.open("tel:07305556219"),
+      bgColor: "bg-yan-blue",
+      hoverColor: "hover:bg-yan-light-blue"
     },
     {
       icon: Mail,
       title: "Email Support",
       description: "Get detailed help via email",
-      contact: "info@yansdrivinglessons.co.uk",
-      hours: "Response within 24 hours"
+      contact: "Yansdriving@gmail.com",
+      hours: "Response within 24 hours",
+      action: () => window.open("mailto:Yansdriving@gmail.com"),
+      bgColor: "bg-yan-red",
+      hoverColor: "hover:bg-yan-red"
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Quick chat support",
       contact: "07305556219",
-      hours: "Instant messaging"
+      hours: "Instant messaging",
+      action: () => window.open("https://wa.me/447305556219"),
+      bgColor: "bg-yan-green",
+      hoverColor: "hover:bg-yan-green"
+    },
+    {
+      icon: Instagram,
+      title: "Instagram",
+      description: "Follow us for updates",
+      contact: "@yansdriving",
+      hours: "Daily updates",
+      action: () => window.open("https://www.instagram.com/yansdriving/"),
+      bgColor: "bg-gradient-to-r from-purple-500 to-pink-500",
+      hoverColor: "hover:from-purple-600 hover:to-pink-600"
     }
   ];
 
@@ -58,20 +77,23 @@ const HelpSupportSection = () => {
         </div>
 
         {/* Contact Options */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {supportOptions.map((option, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+            <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
               <CardHeader>
-                <div className="mx-auto mb-4 p-4 bg-yan-blue rounded-full w-fit">
+                <div className={`mx-auto mb-4 p-4 ${option.bgColor} rounded-full w-fit transition-all duration-300`}>
                   <option.icon className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-lg">{option.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-2">{option.description}</p>
-                <p className="font-semibold text-yan-blue mb-2">{option.contact}</p>
-                <p className="text-sm text-muted-foreground">{option.hours}</p>
-                <Button className="mt-4 bg-yan-blue hover:bg-yan-light-blue text-white">
+                <p className="font-semibold text-primary mb-2">{option.contact}</p>
+                <p className="text-sm text-muted-foreground mb-4">{option.hours}</p>
+                <Button 
+                  onClick={option.action}
+                  className={`${option.bgColor} ${option.hoverColor} text-white transition-all duration-300`}
+                >
                   Contact Now
                 </Button>
               </CardContent>
