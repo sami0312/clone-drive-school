@@ -21,7 +21,7 @@ const HelpSupportSection = () => {
       description: "Get detailed help via email",
       contact: "Yansdriving@gmail.com",
       hours: "Response within 24 hours",
-      action: () => window.open("mailto:Yansdriving@gmail.com"),
+      action: () => window.location.href = "mailto:Yansdriving@gmail.com?subject=Driving Lesson Inquiry",
       bgColor: "bg-yan-blue",
       hoverColor: "hover:bg-yan-green"
     },
@@ -31,7 +31,7 @@ const HelpSupportSection = () => {
       description: "Quick chat support",
       contact: "07305556219",
       hours: "Instant messaging",
-      action: () => window.open("https://wa.me/447305556219"),
+      action: () => window.open("https://wa.me/447305556219?text=Hi%20Yan,%20I'm%20interested%20in%20driving%20lessons.%20Please%20let%20me%20know%20about%20availability.", '_blank'),
       bgColor: "bg-yan-green",
       hoverColor: "hover:bg-yan-blue"
     },
@@ -41,7 +41,7 @@ const HelpSupportSection = () => {
       description: "Follow us for updates",
       contact: "@yansdriving",
       hours: "Daily updates",
-      action: () => window.open("https://www.instagram.com/yansdriving/"),
+      action: () => window.open("https://www.instagram.com/yansdriving/", '_blank'),
       bgColor: "bg-gradient-to-r from-purple-500 to-pink-500",
       hoverColor: "hover:from-purple-600 hover:to-pink-600"
     }

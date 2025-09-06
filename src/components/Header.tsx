@@ -49,7 +49,7 @@ const Header = () => {
             </div>
 
             {/* Phone Number */}
-            <div className="hidden md:flex items-center space-x-2 bg-yan-blue text-white px-4 py-2 rounded-lg">
+            <div className="hidden md:flex items-center space-x-2 bg-yan-green text-white px-4 py-2 rounded-lg">
               <Phone className="h-4 w-4" />
               <span className="font-semibold">07305556219</span>
             </div>
@@ -107,7 +107,7 @@ const Header = () => {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-64">
                   <div className="flex flex-col space-y-4 mt-4">
-                    <div className="flex items-center space-x-2 bg-yan-blue text-white px-4 py-2 rounded-lg">
+                    <div className="flex items-center space-x-2 bg-yan-green text-white px-4 py-2 rounded-lg">
                       <Phone className="h-4 w-4" />
                       <span className="font-semibold">07305556219</span>
                     </div>

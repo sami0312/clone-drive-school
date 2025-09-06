@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, Clock, CreditCard, CheckCircle } from "lucide-react";
+import { Calendar, Clock, Banknote, CheckCircle } from "lucide-react";
+import WhatsAppBookingForm from "./WhatsAppBookingForm";
 
 const BookOnlineSection = () => {
   const steps = [
@@ -11,13 +12,13 @@ const BookOnlineSection = () => {
     },
     {
       icon: Clock,
-      title: "Pick Your Schedule",
-      description: "Choose convenient times that work for you"
+      title: "Message Yan",
+      description: "He will contact you within 24 hours to confirm availability"
     },
     {
-      icon: CreditCard,
-      title: "Secure Payment",
-      description: "Pay securely online with instant confirmation"
+      icon: Banknote,
+      title: "Payment Options",
+      description: "Pay via bank transfer or cash"
     },
     {
       icon: CheckCircle,
@@ -54,9 +55,13 @@ const BookOnlineSection = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-yan-blue hover:bg-yan-green text-white px-12 py-4 text-lg">
-            Start Booking Now
-          </Button>
+          <WhatsAppBookingForm 
+            trigger={
+              <Button size="lg" className="bg-yan-blue hover:bg-yan-green text-white px-12 py-4 text-lg">
+                Book Now
+              </Button>
+            }
+          />
         </div>
       </div>
     </section>
